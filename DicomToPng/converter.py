@@ -17,7 +17,7 @@ if ds[0x0028,0x0004].value == "MONOCHROME1":
 	lut = -1*(lut-255)
 #lut = shape_as(lut)
 
-scaled_image = (np.maximum(voi, 0) / voi.max()) * 255.0
+scaled_image = (np.maximum(lut, 0) / lut.max()) * 255.0
 
 scaled_image = np.uint8(scaled_image)
 
